@@ -42,16 +42,6 @@ function storeAndPushNotification($titleAr, $titleEn, $descriptionAr, $descripti
 }
 ```
 
-Make a notification controller to use notification actions:
-
-```php
-//example
-public function markAsRead($id)
-{
-    return $this->notificationActions->markAsRead(new Employee, $id);
-}
-```
-
 Create js file, set configurations in it and put it in public folder: 
 ```javascript 
 /*

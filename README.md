@@ -11,7 +11,7 @@ composer require Webstdy/Notification
 And add the service provider in config/app.php:
 
 ```php
-Yk\LaravelPackageExample\LaravelPackageExampleProvider::class,
+Webstdy\Notification\NotificationServiceProvider::class,
 ```
 
 Make a helper function to collect notification data:

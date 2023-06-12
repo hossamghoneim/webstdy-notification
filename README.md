@@ -14,6 +14,22 @@ And add the service provider in config/app.php:
 Webstdy\Notification\NotificationServiceProvider::class,
 ```
 
+Add this code to AppServiceProvider:
+```php
+View::composer('partials.dashboard.header', function ($view) 
+{
+    $unreadNotifications = Employee::first()->unreadNotifications();
+    $allNotifications = Employee::first()->notifications();
+    $view->with(['unreadNotifications' => $unreadNotifications, "allNotifications" => $allNotifications]);
+});
+
+View::composer('partials.dashboard.aside', function ($view) 
+{
+    $unreadNotifications = Employee::first()->unreadNotifications()->take(5)->get();
+    $view->with(['unreadNotifications' => $unreadNotifications]);
+});
+```
+
 Make a helper function to collect notification data:
 
 ```php

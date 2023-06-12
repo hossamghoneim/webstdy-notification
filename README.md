@@ -1,4 +1,6 @@
-# Webstdy Firebase Notification
+<p align="center"><a href="https://webstdy.com/web/new-logos/logo.svg" target="_blank"><img src="https://webstdy.com/web/new-logos/logo.svg" width="400" alt="Dorak Logo"></a></p>
+
+# Webstdy Notification
 
 ### Installation
 

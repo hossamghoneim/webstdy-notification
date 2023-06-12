@@ -35,6 +35,16 @@ View::composer('partials.dashboard.aside', function ($view)
 });
 ```
 
+Replace Employee Model by the notified model:
+```php
+#example
+public function markAllAsRead()
+{
+    $notification = Employee::first()->unreadNotifications->markAsRead(); //Employee Model is just an example model you must replace it by your model
+    return redirect()->back();
+}
+```
+
 Make a helper function to collect notification data:
 
 ```php

@@ -2,6 +2,9 @@
 
 ### Installation
 
+- Run php artisan make:notification
+- Make sure you add Notifiable trait in your used model
+
 Install wia composer:
 
 ```
@@ -498,5 +501,14 @@ Put this code in footer:
 <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-messaging.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
 <script src="{{ asset('path-of-your-js-folder/listen-to-firebase-notification.js') }}"></script>
+```
+
+Package Routes:
+```php
+Route::post('/save-token', 'Webstdy\Notification\NotificationController@saveToken')->name('save-token');
+Route::get('notifications/{id}/mark_as_read', 'Webstdy\Notification\NotificationController@markAsRead')->name('notifications.mark_as_read');
+Route::get('notifications/{type}/load-more/{next}', 'Webstdy\Notification\NotificationController@loadMore')->name('notifications.load_more');
+Route::get('notifications/mark-all-as-read', 'Webstdy\Notification\NotificationController@markAllAsRead')->name('notifications.mark_all_as_read');
+Route::post('notifications/change-status-sound' , 'Webstdy\Notification\NotificationController@changeSoundStatus')->name('notifications.change-sound-status');
 ```
 

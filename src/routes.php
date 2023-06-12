@@ -3,6 +3,10 @@
 namespace Webstdy\Notification;
 use Illuminate\Support\Facades\Route;
 
+Route::get('test', function (){
+    dd('hello from test');
+});
+
 /** notifications routes **/
 
 Route::post('/save-token', 'Webstdy\Notification\NotificationController@saveToken')->name('save-token');

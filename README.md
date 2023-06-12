@@ -5,7 +5,13 @@
 Install wia composer:
 
 ```
-composer require Webstdy/firebase-notification
+composer require Webstdy/Notification
+```
+
+And add the service provider in config/app.php:
+
+```php
+Yk\LaravelPackageExample\LaravelPackageExampleProvider::class,
 ```
 
 Make a helper function to collect notification data:
